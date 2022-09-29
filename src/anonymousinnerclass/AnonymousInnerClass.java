@@ -22,32 +22,33 @@ public class AnonymousInnerClass extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-        Button btn = new Button("New");
-        Button btn1 = new Button("Open");
-        Button btn2 = new Button("Save");
-        Button btn3 = new Button("Print");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
+        Button btnNuevo = new Button("Nuevo");
+        Button btnAbrir = new Button("Abrir");
+        Button btnGuardar = new Button("Guardar");
+        Button btnImprimir = new Button("Imprimir");
+        
+        btnNuevo.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
             public void handle(ActionEvent event) {
                 System.out.println("Nuevo proceso");
             }
         });
-        btn1.setOnAction(new EventHandler<ActionEvent>() {
+        btnAbrir.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
             public void handle(ActionEvent event) {
                 System.out.println("Abrir proceso");
             }
         });
-        btn2.setOnAction(new EventHandler<ActionEvent>() {
+        btnGuardar.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
             public void handle(ActionEvent event) {
                 System.out.println("Guardar proceso");
             }
         });
-        btn3.setOnAction(new EventHandler<ActionEvent>() {
+        btnImprimir.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
             public void handle(ActionEvent event) {
@@ -58,7 +59,7 @@ public class AnonymousInnerClass extends Application {
         StackPane root = new StackPane();
         HBox botones = new HBox(10);
         botones.setAlignment(Pos.CENTER);
-        botones.getChildren().addAll(btn, btn1, btn2, btn3);
+        botones.getChildren().addAll(btnNuevo, btnAbrir, btnGuardar, btnImprimir);
         root.getChildren().add(botones);
         
         Scene scene = new Scene(root, 300, 100);
